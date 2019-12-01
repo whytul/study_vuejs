@@ -1,0 +1,17 @@
+https://nodejs.org/ko/
+
+Vue.js Devtools
+
+visual studio code
+ - vetur
+ - material icon (theme)
+ - night owl (code highlight)
+ - Live Server
+ - ESLint
+ - Prettier
+ - Auto Close Tag
+
+
+ https://k39335.tistory.com/60 뷰구조
+이벤트를 뷰 리스터에서 전달 받음 (dom listeners)
+자바스크립트의 데이터가 바뀌면 뷰 data bindings 전달받음

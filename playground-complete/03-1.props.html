@@ -7,21 +7,24 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- https://kr.vuejs.org/v2/guide/components.html#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%9E%91%EC%84%B1
+    뷰 개발도구로 확인 porps 데이터 확인 -->
   <div id="app">
     <!-- <app-header v-bind:프롭스 속성 이름="상위 컴포넌트의 데이터 이름"></app-header> -->
     <app-header v-bind:propsdata="message"></app-header>
     <app-content v-bind:propsdata="num"></app-content>
+    <!-- <app-content v-bind:propsdata1="message"  v-bind:propsdata="messageAdd"></app-header> -->
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
-    var appHeader = {
-      template: '<h1>{{ propsdata }}</h1>',
-      props: ['propsdata']
+    var appHeader = { 
+      template: '<h1>header</h1>',
+      props: ['propsdata'] //props 속성 뷰로 값 변경
     }
     var appContent = {
-      template: '<div>{{ propsdata }}</div>',
-      props: ['propsdata']
+      template: '<div>{{ propsdata }}, {{ propsdata1 }}</div>',
+      props: ['propsdata', 'propsdata1']
     }
 
     new Vue({
@@ -32,6 +35,7 @@
       },
       data: {
         message: 'hi',
+        // messageAdd: '하이',
         num: 10
       }
     })

@@ -8,6 +8,7 @@
 </template>
 
 <script>
+//여기선 컴포넌트 내용을 import 해서 컴포넌트에 등록해서 사용하는게 중요.
 import AppHeader from './components/AppHeader.vue';
 
 // var AppHeader = {
@@ -23,7 +24,7 @@ import AppHeader from './components/AppHeader.vue';
 export default {
   data: function() {
     return {
-      str: 'Header'
+      str: 'Header' //새객체로 리턴한다. 
     }
   },
   components: {

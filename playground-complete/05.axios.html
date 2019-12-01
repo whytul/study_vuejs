@@ -7,6 +7,16 @@
   <title>Axios</title>
 </head>
 <body>
+  <!-- 뷰에서 건장하고 있는 통신 라이브러리 
+  pagekit /vue-resource 는 이전에 공식 지원 라이버리. 지금은 아님. 예제 찾을 때 주의
+  axios 가 공식.
+  github library 사용시
+  자바스크립트이 비동기 처리 패턴
+  1. callback
+  2. promise
+  3. promise + generator
+  4. async & await
+-->
   <div id="app">
     <button v-on:click="getData">get user</button>
     <div>
@@ -24,7 +34,7 @@
       },
       methods: {
         getData: function() { 
-          var vm = this;
+          var vm = this;  //Vue 컴포넌트 this를 vm에 담아두고 axios에서 사용.
           axios.get('https://jsonplaceholder.typicode.com/users/')
             .then(function(response) {
               console.log(response.data);
